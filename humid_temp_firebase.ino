@@ -2,9 +2,9 @@
 #include <ESP8266WiFi.h>
 #include <DHT.h>
 
-#define DHTPIN 14
+#define DHTPIN 14         //D5
 #define DHTTYPE DHT11
-#define LED 4
+#define LED 4   //D2
 
 DHT dht(DHTPIN, DHTTYPE);
 
@@ -14,11 +14,11 @@ float humid;
 FirebaseData ledData;
 FirebaseData dataFirebase;
 
-char* wifi_name = "FreeS Wifi ^-^";
-char* password = "ThanhVinhCE1713981";
+char* wifi_name = "*********";          // your wifi name here
+char* password = "*********";           // your wifi password here
 
-char* database_secret = "xfEARgw349Mr6nQoP9Vs4xvakBr5tDBsOblDW9fb";
-char* firebase_addr = "humid-temp-firebase-default-rtdb.firebaseio.com/";
+char* database_secret = "*********";    // Real-time database secret key here
+char* firebase_addr = "********";       // Enter database HOST without "https:// "  and "/" at the end of URL
 
 void setup(){
     Serial.begin(115200);
